@@ -12,6 +12,9 @@
     "prod": "brunch build --production"
   },
   "dependencies": {
+    "draggable": "^4.0.4",
+    "js-draggable": "^1.0.0",
+    "simple-draggable": "^1.1.2",
     "stylus-brunch": "^2.7.2"
   },
   "devDependencies": {

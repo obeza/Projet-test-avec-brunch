@@ -1,16 +1,29 @@
-import Tools from './tools';
+
 import Countdown from 'countdown-js';
 
-const _to = new Tools;
+var tzdragg = require('./draggable.js'); 
+
+//const _to = new Tools;
 
 export default class App {
     
     constructor(){
-        console.log('constructor');
     }
 
     init(){
-        console.log('hello from init');
+        console.log('init');
+        document.getElementById("elem").addEventListener("mousedown", 
+            ()=>{
+                console.log('drag start');
+                tzdragg.startMoving(event);
+            });
+        
+        document.getElementById("elem").addEventListener("mouseup", 
+            ()=>{
+                console.log('drag stop');
+                tzdragg.stopMoving(event);
+            });
+
 
         var ten_days = 1000 * 60 * 4;
         var end = new Date(new Date().getTime() + ten_days)

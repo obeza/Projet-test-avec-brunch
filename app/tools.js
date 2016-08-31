@@ -7,4 +7,5 @@ export default class Tools{
     hello(){
         console.log('dis bonjour...');
     }
+
 }
